@@ -1,0 +1,58 @@
+name: CI-dev
+
+on:
+    push:
+        branches: [develop]
+    pull_request:
+        branches: [develop]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: clean all
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: fred
+            password: ${{ secrets.PASSWORD }}
+            port: 22
+            script: ./deploy-scripts/sheepfoldsmith/clean-all.sh
+        - name: clone
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: fred
+            password: ${{ secrets.PASSWORD }}
+            port: 22
+            script: ./deploy-scripts/sheepfoldsmith/clone.sh
+        - name: pulldev
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: fred
+            password: ${{ secrets.PASSWORD }}
+            port: 22
+            script: ./deploy-scripts/sheepfoldsmith/pulldev.sh
+        - name: build
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: fred
+            password: ${{ secrets.PASSWORD }}
+            port: 22
+            script: ./deploy-scripts/sheepfoldsmith/build.sh
+            command_timeout: "30m"
+        - name: dockerize
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: fred
+            password: ${{ secrets.PASSWORD }}
+            port: 22
+            script: ./deploy-scripts/sheepfoldsmith/dockerize.sh
+
+
+
+
+
