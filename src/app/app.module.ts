@@ -15,6 +15,9 @@ import {LandingComponent} from './pages/landing/landing.component';
 import {FindUsComponent} from './pages/find-us/find-us.component';
 import {AgmCoreModule} from '@agm/core';
 import {MapComponent} from './pages/find-us/map/map.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import {CalendarComponent} from './pages/find-us/calendar/calendar.component';
 
 
 // AoT requires an exported function for factories
@@ -27,7 +30,8 @@ export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
     LanguageSelectionComponent,
     LandingComponent,
     FindUsComponent,
-    MapComponent
+    MapComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,7 @@ export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
           {path: '**', redirectTo: 'landing', pathMatch: 'full'},
         ], {scrollPositionRestoration: 'enabled'}
     ),
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
 
   ],
   providers: [],

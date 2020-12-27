@@ -1,0 +1,19 @@
+@import '~angular-calendar/scss/angular-calendar.scss';
+
+.cal-month-view .cal-cell-top {
+  min-height: 1px;
+  height: auto;
+  .cal-day-number {
+    margin: 0px;
+  }
+
+}
+
+.cal-month-view .cal-day-cell {
+  min-height: 1px;
+  height: auto;
+}
+
+.cal-month-view .cal-cell-top {
+  height: auto;
+}
