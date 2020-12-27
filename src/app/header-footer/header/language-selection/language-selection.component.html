@@ -1,0 +1,8 @@
+<div class="col">
+  <div ngbDropdown display="dynamic" class="d-inline-block" placement="bottom-right">
+    <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>{{currentLanguageCode}}</a>
+    <div ngbDropdownMenu  aria-labelledby="dropdownBasic1">
+      <button  *ngFor="let language of languages, let index= index" ngbDropdownItem (click)="languageSelected(index)">{{language.name}}</button>
+    </div>
+  </div>
+</div>

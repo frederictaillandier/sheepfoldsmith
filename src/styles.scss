@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+:root {
+  --my-dark: #090909;
+  --fullwidth: 100%;
+}
+
+@font-face {
+  font-family: chunk;
+  src: url(./assets/fonts/FuturaNewMedium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: script;
+  src: url(./assets/fonts/FuturaNewMedium.otf) format("opentype");
+}
+
+.container{
+  max-width: 100%;
+}
+
+.page {
+  margin-bottom: 10vh;
+}
+
+.route {
+  position:relative;
+}
+
+.module {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  font-family: 'chunk', 'arial', sans-serif;
+  color: #ffffff;
+  font-size: 100px;
+  height: 100px;
+  font-weight: lighter;
+}
+
+h2 {
+  font-family: 'chunk', 'arial', sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  color: var(--my_forest);
+  font-family: 'script', 'arial', sans-serif;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-orange {
+  background-color: var(--my_orange);
+  color: white;
+  border-color: var(--my_orange);
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.btn-orange:hover {
+  background-color: var(--my_orange_dark);
+  border-color: var(--my_orange_dark);
+}
+
+html, body { height: 100%; background-color: var(--my-dark)}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
