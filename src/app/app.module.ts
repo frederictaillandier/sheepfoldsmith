@@ -18,6 +18,7 @@ import {MapComponent} from './pages/find-us/map/map.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import {CalendarComponent} from './pages/find-us/calendar/calendar.component';
+import {RightPanelComponent} from './pages/find-us/right-panel/right-panel.component';
 
 
 // AoT requires an exported function for factories
@@ -31,7 +32,8 @@ export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
     LandingComponent,
     FindUsComponent,
     MapComponent,
-    CalendarComponent
+    CalendarComponent,
+    RightPanelComponent
   ],
   imports: [
     BrowserModule,

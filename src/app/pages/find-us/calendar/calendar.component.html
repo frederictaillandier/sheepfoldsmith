@@ -1,3 +1,4 @@
+<div class="calendar">
 <ng-template #customCellTemplate let-day="day" let-locale="locale">
     <div class="cal-cell-top">
     <span class="cal-day-badge" *ngIf="day.badgeTotal > 0"
@@ -7,9 +8,7 @@
         >{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span
         >
     </div>
-    <small style="margin: 5px;"
-    >There are {{ day.events.length }} events on this day</small
-    >
+    <small style="margin: 5px;"> </small>
 </ng-template>
 
 <div [ngSwitch]="view">
@@ -20,6 +19,8 @@
             [activeDayIsOpen]="false"
             [cellTemplate]="customCellTemplate"
             (eventClicked)="eventClicked($event)"
+            [weekStartsOn]="1"
+            [weekendDays]="[0]"
     >
     </mwl-calendar-month-view>
     <mwl-calendar-week-view
@@ -36,4 +37,5 @@
             (eventClicked)="eventClicked($event)"
     >
     </mwl-calendar-day-view>
+</div>
 </div>

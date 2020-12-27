@@ -18,27 +18,6 @@
   src: url(./assets/fonts/FuturaNewMedium.otf) format("opentype");
 }
 
-.container{
-  max-width: 100%;
-}
-
-.page {
-  margin-bottom: 10vh;
-}
-
-.route {
-  position:relative;
-}
-
-.module {
-  max-width: 1200px;
-  margin: 0px auto;
-}
-
-a {
-  color: black;
-}
-
 h1 {
   font-family: 'chunk', 'arial', sans-serif;
   color: #ffffff;
@@ -78,4 +57,12 @@ h4 {
 }
 
 html, body { height: 100%; background-color: var(--my-dark)}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: auto;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  max-width: 1200px;
+}
+
+html {
+  background-color: black;
+}
