@@ -12,12 +12,14 @@ export class RightPanelComponent {
     }
 
 
-    get title(): string {
-        return this.sellingPointsService.sellingPoints[this.sellingPointsService.selectedShopIndex].title;
+    get title(): string  {
+        const result = this.sellingPointsService.currentSelectedPoint.title;
+        return result !== undefined ? result : '';
     }
 
     get description(): string {
-        return this.sellingPointsService.sellingPoints[this.sellingPointsService.selectedShopIndex].description;
+        const result = this.sellingPointsService.currentSelectedPoint.description;
+        return result !== undefined ? result : '';
     }
 
 }

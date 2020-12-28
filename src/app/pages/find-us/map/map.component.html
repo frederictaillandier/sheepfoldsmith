@@ -1,8 +1,11 @@
 <agm-map [latitude]="lat" [longitude]="lng">
+
     <agm-marker *ngFor="let marker of markers"
-                [latitude]="marker.lat"
-                [longitude]="marker.lng"
-                [iconUrl]="marker.icon"
+                [latitude]="marker.lat?marker.lat:0"
+                [longitude]="marker.lng?marker.lng:0"
+                [iconUrl]="marker.icon?marker.icon:''"
                 (markerClick)="markerClicked(marker)"
     ></agm-marker>
+
 </agm-map>
+<!--[iconUrl]="makeIcon(marker)"-->
