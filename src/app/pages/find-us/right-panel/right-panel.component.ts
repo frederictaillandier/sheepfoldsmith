@@ -16,4 +16,8 @@ export class RightPanelComponent {
         return this.sellingPointsService.sellingPoints[this.sellingPointsService.selectedShopIndex].title;
     }
 
+    get description(): string {
+        return this.sellingPointsService.sellingPoints[this.sellingPointsService.selectedShopIndex].description;
+    }
+
 }

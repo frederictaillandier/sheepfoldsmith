@@ -13,5 +13,31 @@
     "TermsAndConditions": "Terms and conditions",
     "SiteMap": "Site map"
   },
+
+  "Shop": {
+    "Sheepfold": {
+      "Title": "La Bergerie Taillandier",
+      "Description": "Venez directement chercher vos produits à la ferme en nous contactant au 06 08 62 37 57"
+    },
+    "LicesMarket": {
+      "Title": "Le Marché des Lices",
+      "Description": "Tous les samedis matins de 7h à 13h"
+    },
+    "BeeHouse1": {
+      "Title": "La Ruche qui dit oui ! Les Horizons",
+      "Description": "Commandez chez notre partenaire via leur site internet https://laruchequiditoui.fr/fr-FR/assemblies/5992"
+    },
+    "BeeHouse2": {
+      "Title": "La Ruche qui dit oui ! La Bellangerais",
+      "Description": "Commandez chez notre partenaire via leur site internet https://laruchequiditoui.fr/fr-FR/assemblies/6557"
+    },
+    "BeeHouse3": {
+      "Title": "La Ruche qui dit oui ! Rennes Sud",
+      "Description": "Commandez chez notre partenaire via leurs site internet https://laruchequiditoui.fr/fr-FR/assemblies/10293"
+    }
+  },
+
+
+
   "LoremIpsum": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 }
