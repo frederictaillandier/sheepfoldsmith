@@ -24,7 +24,6 @@ export class MapComponent {
     }
 
     public makeIcon(point: SellingPoint): any {
-
         const isSelected = this.sellingPointsService.currentSelectedPoint.id === point.id && point.id !== undefined;
 
         const size = isSelected ? 40 : 30;
