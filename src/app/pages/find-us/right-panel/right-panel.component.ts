@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {SellingPointsService} from '../../../services/selling-points.service';
 
 @Component({
     selector: 'app-find-us-panel',
@@ -6,9 +7,13 @@ import {Component, Input} from '@angular/core';
     styleUrls: ['right-panel.component.scss']
 })
 export class RightPanelComponent {
-    @Input()
-    title = 'MISSING TITLE';
 
-    @Input()
-    description = 'LoremIpsum';
+    constructor(private sellingPointsService: SellingPointsService) {
+    }
+
+
+    get title(): string {
+        return this.sellingPointsService.sellingPoints[this.sellingPointsService.selectedShopIndex].title;
+    }
+
 }

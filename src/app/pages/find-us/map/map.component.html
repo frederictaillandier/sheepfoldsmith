@@ -1,4 +1,8 @@
 <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-    <agm-marker [latitude]="48.1124221" [longitude]="-1.6841356.15"></agm-marker>
+    <agm-marker *ngFor="let marker of markers"
+                [latitude]="marker.lat"
+                [longitude]="marker.lng"
+                [iconUrl]="'/assets/images/sheep.svg'"
+                (markerClick)="markerClicked(marker)"
+    ></agm-marker>
 </agm-map>
