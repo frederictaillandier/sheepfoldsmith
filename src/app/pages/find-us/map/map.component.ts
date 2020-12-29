@@ -22,7 +22,7 @@ export class MapComponent {
 
     public markerClicked(marker: SellingPoint): void {
         if (marker.id !== undefined) {
-            this.sellingPointsService.setCurrentSelectedIndex(marker.id);
+            this.sellingPointsService.selectableTabs = [marker.id];
         }
     }
 

@@ -8,9 +8,10 @@ import {SellingPointsService} from '../../../services/selling-points.service';
 })
 export class RightPanelComponent {
 
+    activeTabIndex = 0;
+
     constructor(private sellingPointsService: SellingPointsService) {
     }
-
 
     get title(): string  {
         const result = this.sellingPointsService.currentSelectedPoint.title;
@@ -20,6 +21,17 @@ export class RightPanelComponent {
     get description(): string {
         const result = this.sellingPointsService.currentSelectedPoint.description;
         return result !== undefined ? result : '';
+    }
+
+    get tabsIcons(): string[] {
+        const result = this.sellingPointsService.sellingPoints
+            .filter(point => this.sellingPointsService.selectableTabs.includes(point.id))
+            .map(point => point.icon);
+        return result;
+    }
+
+    public selectTab(index: number): void {
+        this.sellingPointsService.setCurrentSelectedIndex(index);
     }
 
 }

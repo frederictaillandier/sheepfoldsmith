@@ -1,2 +1,7 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="activeTabIndex" class="nav-tabs">
+    <li *ngFor="let tabIcon of tabsIcons; let index = index" [ngbNavItem]="index">
+        <a ngbNavLink (click)="selectTab(index)" ><img src="{{'/assets/images/map-markers/' + tabIcon + '.svg'}}"></a>
+    </li>
+</ul>
 <h2>{{title | translate}}</h2>
 <p>{{description | translate}}</p>

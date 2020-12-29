@@ -2,12 +2,12 @@ import {Injectable} from '@angular/core';
 import {CalendarEvent} from 'angular-calendar';
 
 export class SellingPoint {
-    id: number | undefined;
-    title: string | undefined;
-    description: string | undefined;
-    lat: number | undefined;
-    lng: number | undefined;
-    icon: string | undefined;
+    id!: number;
+    title!: string;
+    description!: string;
+    lat!: number;
+    lng!: number;
+    icon!: string;
     dayOfTheWeek: number | undefined; // leave undefined if non recurrent
     startDate: Date | undefined; // only using hour if recurrent
     endDate: Date | undefined; // only using hour if recurrent
@@ -25,6 +25,17 @@ export class SellingPointsService {
 
     public get currentSelectedPoint(): SellingPoint {
         return this.points[this._selectedSellingPointIndex];
+    }
+
+    private _selectableTabs = [0];
+
+    public get selectableTabs(): number[] {
+        return this._selectableTabs;
+    }
+
+    public set selectableTabs(numbers){
+        this._selectableTabs = numbers;
+        this._selectedSellingPointIndex = numbers[0];
     }
 
     private points: SellingPoint[] = [
@@ -96,8 +107,6 @@ export class SellingPointsService {
         }
     ];
 
-
-
     private _monthEvents: CalendarEvent[] = [];
     public get monthEvents(): CalendarEvent[] {
         return this._monthEvents;
@@ -106,7 +115,6 @@ export class SellingPointsService {
     public get sellingPoints(): SellingPoint[] {
         return this.points;
     }
-
 
     public setCurrentSelectedIndex(index: number): void {
         this._selectedSellingPointIndex = index;
@@ -127,7 +135,6 @@ export class SellingPointsService {
             if (point.dayOfTheWeek === undefined) {
                 return accumulator;
             }
-            // const accResult: CalendarEvent[] = [];
             const decalToFirstDelivery = (firstDayOfMonth.getDay() + 7 - point.dayOfTheWeek) % 7;
             let sellingIterator = new Date(firstDayOfMonth.getTime() - decalToFirstDelivery * dayInMilliSeconds);
 
@@ -147,14 +154,15 @@ export class SellingPointsService {
         this._monthEvents = result;
     }
 
-    public getEventIdForDate(date: Date): number {
-        for (const point of this.points)
-        {
-            if (date.getDay() === point.dayOfTheWeek && point.id)
-            {
-                return point.id;
+    public getPointsIdForDate(date: Date): number[] {
+        const results = [];
+        for (const point of this.points) {
+            if (date.getDay() === point.dayOfTheWeek && point.id) {
+               results.push(point.id);
             }
         }
-        return 0;
+        results.push(0);
+        return results;
     }
+
 }

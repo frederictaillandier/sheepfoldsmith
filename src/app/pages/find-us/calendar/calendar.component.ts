@@ -12,41 +12,9 @@ import {SellingPointsService} from '../../../services/selling-points.service';
 })
 export class CalendarComponent {
     view: CalendarView = CalendarView.Month;
-
     viewDate: Date = new Date();
-
-
-/*
-    events: CalendarEvent[] = [
-        {
-            title: 'LicesMarket',
-            start: new Date(2020, 11, 5, 7),
-            end: new Date(2020, 11, 5, 13),
-        },
-        {
-            title: 'LicesMarket',
-            start: new Date(2020, 11, 12, 7),
-            end: new Date(2020, 11, 12, 13),
-        },
-        {
-            title: 'LicesMarket',
-            start: new Date(2020, 11, 19, 7),
-            end: new Date(2020, 11, 19, 13),
-        },
-        {
-            title: 'LicesMarket',
-            start: new Date(2020, 11, 26, 7),
-            end: new Date(2020, 11, 26, 13),
-        },
-        {
-            title: 'Or click me',
-            start: new Date(),
-        },
-    ];
-*/
     events: CalendarEvent[] = [];
 
-    private readonly darkThemeClass = 'dark-theme';
     constructor(private sellingPointsService: SellingPointsService) {
         this.events = sellingPointsService.monthEvents;
     }
@@ -56,9 +24,9 @@ export class CalendarComponent {
     }
 
     onDateClicked(event: { day: MonthViewDay<any>; sourceEvent: any }): void {
-        const eventId = this.sellingPointsService.getEventIdForDate(event.day.date);
+        const eventIds = this.sellingPointsService.getPointsIdForDate(event.day.date);
 
-        this.sellingPointsService.setCurrentSelectedIndex(eventId);
+        this.sellingPointsService.selectableTabs = eventIds;
     }
 
 

@@ -6,18 +6,21 @@ import Icon = google.maps.Icon;
 })
 export class MapMarkerService {
 
+    scaleSizeLarge = new google.maps.Size(60, 60);
+    scaleSizeSmall = new google.maps.Size(40, 40);
+
     icons: { [id: string]: { normal: Icon, selected: Icon} } = {
         sheep: {
-            selected: {url: '/assets/images/map-markers/sheep-selected.svg', scaledSize: new google.maps.Size(60, 60)},
-            normal: {url: '/assets/images/map-markers/sheep.svg', scaledSize: new google.maps.Size(40, 40)}
+            selected: {url: '/assets/images/map-markers/sheep-selected.svg', scaledSize: this.scaleSizeLarge},
+            normal: {url: '/assets/images/map-markers/sheep.svg', scaledSize: this.scaleSizeSmall}
         },
         beehive: {
-            selected: {url: '/assets/images/map-markers/beehive-selected.svg', scaledSize: new google.maps.Size(60, 60)},
-            normal: {url: '/assets/images/map-markers/beehive.svg', scaledSize: new google.maps.Size(40, 40)}
+            selected: {url: '/assets/images/map-markers/beehive-selected.svg', scaledSize: this.scaleSizeLarge},
+            normal: {url: '/assets/images/map-markers/beehive.svg', scaledSize: this.scaleSizeSmall}
         },
         default: {
-            selected: {url: '/assets/images/map-markers/default-selected.svg', scaledSize: new google.maps.Size(60, 60)},
-            normal: {url: '/assets/images/map-markers/default.svg', scaledSize: new google.maps.Size(40, 40)}
+            selected: {url: '/assets/images/map-markers/default-selected.svg', scaledSize: this.scaleSizeLarge},
+            normal: {url: '/assets/images/map-markers/default.svg', scaledSize: this.scaleSizeSmall}
         },
 
     };
