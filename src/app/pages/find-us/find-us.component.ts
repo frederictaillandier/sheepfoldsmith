@@ -17,4 +17,8 @@ export class FindUsComponent {
         return this.sellingPointsService.sellingPoints;
     }
 
+    public get selectedId(): number {
+        return this.sellingPointsService.currentSelectedIndex;
+    }
+
 }

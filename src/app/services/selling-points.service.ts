@@ -19,6 +19,10 @@ export class SellingPoint {
 export class SellingPointsService {
 
     private _selectedSellingPointIndex = 0;
+    public get currentSelectedIndex(): number{
+        return this._selectedSellingPointIndex;
+    }
+
     public get currentSelectedPoint(): SellingPoint {
         return this.points[this._selectedSellingPointIndex];
     }
@@ -30,7 +34,7 @@ export class SellingPointsService {
             description: 'Shop.Sheepfold.Description',
             lat: 48.402199962615164,
             lng: -1.0382391904184438,
-            icon: '/assets/images/sheep.svg',
+            icon: 'sheep',
             dayOfTheWeek: undefined,
             startDate: undefined,
             endDate: undefined
@@ -52,7 +56,7 @@ export class SellingPointsService {
             description: 'Shop.BeeHouse1.Description',
             lat: 48.1124221,
             lng: -1.6863243,
-            icon: '/assets/images/beehive.svg',
+            icon: 'beehive',
             dayOfTheWeek: 1,
             startDate: new Date(2020, 0, 0, 18, 30),
             endDate: new Date(2020, 0, 0, 20)
@@ -63,7 +67,7 @@ export class SellingPointsService {
             description: 'Shop.BeeHouse2.Description',
             lat: 48.1355746,
             lng: -1.6703714,
-            icon: '/assets/images/beehive.svg',
+            icon: 'beehive',
             dayOfTheWeek: 3,
             startDate: new Date(2020, 0, 0, 17),
             endDate: new Date(2020, 0, 0, 19)
@@ -74,7 +78,7 @@ export class SellingPointsService {
             description: 'Shop.BeeHouse3.Description',
             lat: 48.0952684,
             lng: -1.6526013,
-            icon: '/assets/images/beehive.svg',
+            icon: 'beehive',
             dayOfTheWeek: 3,
             startDate: new Date(2020, 0, 0, 17),
             endDate: new Date(2020, 0, 0, 19)
