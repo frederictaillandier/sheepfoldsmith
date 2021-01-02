@@ -9,7 +9,6 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {LanguageSelectionComponent} from './header-footer/header/language-selection/language-selection.component';
-import {AngularFittextModule} from 'angular-fittext';
 import {RouterModule} from '@angular/router';
 import {LandingComponent} from './pages/landing/landing.component';
 import {FindUsComponent} from './pages/find-us/find-us.component';
@@ -19,6 +18,8 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import {CalendarComponent} from './pages/find-us/calendar/calendar.component';
 import {RightPanelComponent} from './pages/find-us/right-panel/right-panel.component';
+import {Ng2FittextModule} from 'ng2-fittext';
+import {CarouselComponent} from './pages/landing/carousel/carousel.component';
 
 
 // AoT requires an exported function for factories
@@ -33,13 +34,14 @@ export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
     FindUsComponent,
     MapComponent,
     CalendarComponent,
-    RightPanelComponent
+    RightPanelComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFittextModule,
+    Ng2FittextModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDDM4AFDaxQz3ARNJExS5FC8_QD4KJVhSg'
     }),

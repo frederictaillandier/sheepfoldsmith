@@ -5,6 +5,7 @@
 
 :root {
   --my-dark: #090909;
+  --my-white: #f7ece4;
   --fullwidth: 100%;
 }
 
@@ -20,7 +21,7 @@
 
 h1 {
   font-family: 'chunk', 'arial', sans-serif;
-  color: #ffffff;
+  color: var(--my-white);
   font-size: 100px;
   height: 100px;
   font-weight: lighter;
@@ -29,10 +30,11 @@ h1 {
 h2 {
   font-family: 'chunk', 'arial', sans-serif;
   font-weight: bold;
+  color: var(--my-white);
 }
 
 h3 {
-  color: var(--my_forest);
+  color: var(--my-white);
   font-family: 'script', 'arial', sans-serif;
   font-weight: bold;
 }
@@ -42,6 +44,10 @@ h4 {
   font-weight: bold;
 }
 
+p {
+  color: var(--my-white);
+}
+
 .btn-orange {
   background-color: var(--my_orange);
   color: white;
@@ -49,8 +55,8 @@ h4 {
   border-radius: 40px;
   padding-left: 20px;
   padding-right: 20px;
-
 }
+
 .btn-orange:hover {
   background-color: var(--my_orange_dark);
   border-color: var(--my_orange_dark);

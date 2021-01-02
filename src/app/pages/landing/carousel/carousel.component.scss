@@ -1,0 +1,19 @@
+.picsum-img-wrapper {
+  img {
+    float: right;
+  }
+}
+
+.description {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: -17%;
+  z-index: 1;
+}
+
+.img {
+  background: linear-gradient(90deg, var(--my-dark), rgba(0, 0, 0, 0)), url('https://picsum.photos/id/944/900/500') ;
+  height: 500px;
+  width: 100%;
+  background-size: auto;
+}
