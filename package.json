@@ -29,7 +29,6 @@
     "bootstrap": "^4.4.1",
     "date-fns": "^2.16.1",
     "font-awesome": "^4.7.0",
-    "ng2-fittext": "^1.2.12",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

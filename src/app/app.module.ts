@@ -18,8 +18,8 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import {CalendarComponent} from './pages/find-us/calendar/calendar.component';
 import {RightPanelComponent} from './pages/find-us/right-panel/right-panel.component';
-import {Ng2FittextModule} from 'ng2-fittext';
 import {CarouselComponent} from './pages/landing/carousel/carousel.component';
+import {LogoStripComponent} from './pages/landing/logo-strip/logo-strip.component';
 
 
 // AoT requires an exported function for factories
@@ -35,13 +35,13 @@ export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
     MapComponent,
     CalendarComponent,
     RightPanelComponent,
-    CarouselComponent
+    CarouselComponent,
+    LogoStripComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    Ng2FittextModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDDM4AFDaxQz3ARNJExS5FC8_QD4KJVhSg'
     }),
