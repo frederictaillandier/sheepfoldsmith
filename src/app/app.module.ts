@@ -21,6 +21,8 @@ import {RightPanelComponent} from './pages/find-us/right-panel/right-panel.compo
 import {CarouselComponent} from './pages/landing/carousel/carousel.component';
 import {LogoStripComponent} from './pages/landing/logo-strip/logo-strip.component';
 import {FarmerStripComponent} from './pages/landing/farmer-strip/farmer-strip.component';
+import {MaineBlueComponent} from './pages/landing/maine-blue/maine-blue.component';
+import {HoneyStripComponent} from './pages/landing/honey-strip/honey-strip.component';
 
 
 // AoT requires an exported function for factories
@@ -38,7 +40,9 @@ export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
     RightPanelComponent,
     CarouselComponent,
     LogoStripComponent,
-    FarmerStripComponent
+    FarmerStripComponent,
+    MaineBlueComponent,
+    HoneyStripComponent
   ],
   imports: [
     BrowserModule,

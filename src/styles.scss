@@ -6,6 +6,7 @@
 :root {
   --my-dark: #090909;
   --my-white: #f7ece4;
+  --my-brown: #A9705D;
   --fullwidth: 100%;
 }
 
@@ -29,8 +30,8 @@ h1 {
 
 h2 {
   font-family: 'chunk', 'arial', sans-serif;
-  font-weight: bold;
-  color: var(--my-white);
+  font-size: 72px;
+  color: var(--my-brown);
 }
 
 h3 {
