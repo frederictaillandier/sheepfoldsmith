@@ -1,0 +1,29 @@
+.text-col {
+  margin-right: -17%;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.img {
+  float: right;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+  position: relative;
+  background: url("/assets/images/landing/lamb.jpg") no-repeat;
+  background-size: contain;
+}
+
+img {
+  z-index: -1;
+  position: relative;
+  width: 100%;
+}
+
+.txt {
+  background-color: var(--my-white);
+  margin-left: 15px;
+  z-index: 1;
+}

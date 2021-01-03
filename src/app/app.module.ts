@@ -20,6 +20,7 @@ import {CalendarComponent} from './pages/find-us/calendar/calendar.component';
 import {RightPanelComponent} from './pages/find-us/right-panel/right-panel.component';
 import {CarouselComponent} from './pages/landing/carousel/carousel.component';
 import {LogoStripComponent} from './pages/landing/logo-strip/logo-strip.component';
+import {FarmerStripComponent} from './pages/landing/farmer-strip/farmer-strip.component';
 
 
 // AoT requires an exported function for factories
@@ -36,7 +37,8 @@ export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
     CalendarComponent,
     RightPanelComponent,
     CarouselComponent,
-    LogoStripComponent
+    LogoStripComponent,
+    FarmerStripComponent
   ],
   imports: [
     BrowserModule,
