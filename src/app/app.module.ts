@@ -23,6 +23,8 @@ import {LogoStripComponent} from './pages/landing/logo-strip/logo-strip.componen
 import {FarmerStripComponent} from './pages/landing/farmer-strip/farmer-strip.component';
 import {MaineBlueComponent} from './pages/landing/maine-blue/maine-blue.component';
 import {HoneyStripComponent} from './pages/landing/honey-strip/honey-strip.component';
+import {BookingStripComponent} from './pages/landing/booking-strip/booking-strip.component';
+import {BookingButtonComponent} from './pages/landing/booking-strip/booking-button/booking-button.component';
 
 
 // AoT requires an exported function for factories
@@ -42,7 +44,9 @@ export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(h
     LogoStripComponent,
     FarmerStripComponent,
     MaineBlueComponent,
-    HoneyStripComponent
+    HoneyStripComponent,
+    BookingStripComponent,
+    BookingButtonComponent
   ],
   imports: [
     BrowserModule,

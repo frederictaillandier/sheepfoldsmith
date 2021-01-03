@@ -1,0 +1,42 @@
+<div class="col white-background">
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-auto">
+            <h2>
+                Comment commander
+            </h2>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-auto">
+            C' est tres facile blabla
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-booking-button
+                    [iconUrl]="'/assets/images/landing/booking-strip/phone.svg'"
+                    [title]="'Par téléphone'"
+                    [description]="'Passez commande par téléphone et venez chercher vos produits directement à la ferme'"
+            ></app-booking-button>
+        </div>
+        <div class="col">
+            <app-booking-button
+                    [iconUrl]="'/assets/images/landing/booking-strip/market.svg'"
+                    [title]="'Sur le marché'"
+                    [description]="'Venez nous rencontrer sur le marché des Lices de Rennes'"
+            ></app-booking-button>
+        </div>
+        <div class="col">
+            <app-booking-button
+                    [iconUrl]="'/assets/images/landing/booking-strip/handshake.svg'"
+                    [title]="'En ligne'"
+                    [description]="'Commandez en ligne via nos partenaires'"
+            ></app-booking-button>
+        </div>
+    </div>
+</div>
